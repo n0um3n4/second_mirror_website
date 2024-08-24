@@ -1,0 +1,121 @@
+<!--
+I like the idea of doing impossible things.
+I like the idea that we can have the future we see in movies now.
+I like to try and make it real.
+Would you partake?
+Contact me.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <title>an independent scientist</title>
+    <style>
+      @font-face { font-family: 'monocraft'; src: url('Monocraft.woff') format('woff'); font-weight: normal; font-style: normal; }
+      html { display: flex; justify-content: center; }
+      body { font-size: 16px; font-family: 'monocraft'; color: #FFFFFF; background: #000000; min-width: 76ch; max-width: 76ch; margin: 0 1rem; display: flex; flex-direction: column; justify-content: center; text-align: justify;}
+      a:hover,a:link,a:visited,a:active { text-decoration: none; color: #FFFFFF;}
+      em { color: red; }
+      summary::-webkit-details-marker { display: none; }
+      summary::marker { display: none; }
+      summary { font-weight: bold; cursor: pointer; padding: 0.618rem; border: 0; display: inline-block; }
+      summary::before { content: "▶"; margin-right: 0.618rem; }
+      details[open] summary::before { content: "▶"; color: #FF0000; }
+      details p { margin-top: 0.618rem; padding-left: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h2><em>@</em>idunnowhatimdoing</h2>
+    <article>
+      <details>
+        <summary>Design Patterns, P1 ~ 2024.08.23 @ 19.50</summary>
+        <p>
+          How many design patters are? Well, if you read the title of such blog, you probably guess: I have no idea but let's find out.
+        </p>
+        <p>
+          A very passive research, I know very unfair, it says that the book <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>
+          was so influential that apparently those are the design patterns. 
+        </p>
+        <p>
+          The book focuses on, well, OOP. It says nothing about functional programming. I wonder how that happened, I mean, not why functional programming
+          was not included in the book but rather why OOP won the battle (bit dramatic here). Ignoring any hardware limitations, there were, I really
+          don't understand why OOP got more popular. I mean, I can guess, functional programming is too <em>math-y</em>, right?
+        </p>
+        <p>
+          The point I'm trying to make is that we as human tend to not to take the high road. Maybe is the path of least effort? I mean
+          in a way it is but to what cost?
+        </p>
+        <p>
+          Anywho! I dislike design patterns. In my head, that complexity makes no sense but I didn't know why. I studied them. I memorized them.
+          I have to since I'm not a software engineer and I have to compete with actual software engineers. I have always disliked them.
+          I code them since the jobs required that but honest to God, bleh.
+        </p>
+        <p>
+          Let's try to code them in Elixir, my favorite programming language. Let's start with <em>Factory method</em> in Ruby. 
+        </p>
+        <img src="factory-method-1.png" alt="Factory Method" style="width: calc(100% - 1rem); margin-left: 1rem;" />
+        <p>
+          The Creator class provides the template method to be used by each class that inherited from it. You can have N different ConcreteCreator
+          that do their own magic and so it is the factory method.
+        </p>
+        <p>
+          And now, in Elixir
+        </p>
+        <img src="factory-method-2.png" alt="Factory Method" style="width: calc(100% - 1rem); margin-left: 1rem;" />
+        <p>
+          Of course this is a very simple approach. In the OOP version, each ConcreteCreator can grow as needed and so in functional approach.
+          But I do believe that functional programming is just a matter of functions and composition of them and in the OOP, depending on the language,
+          it gets messier and messier. At least for me, it's more easy to think and look for functions than hidden functions and such.
+        </p>
+        <p>
+          Other devs say that the design patterns appears naturally but I disagree. I think they do appear but the underline mechanism is the reason for it.
+          Others say function programming has their own complexity to grow and yes that is correct but the composition for it may need some effort in the beginning
+          but once the mental model is acquired, everything becomes smoothly.
+        </p>
+        <p>
+          but what the hell do I know? <em>I dunno what I'm doing</em>.
+        </p>
+      </details>
+    </article> 
+    <article>
+      <details>
+        <summary>Init blog ~ 2024.08.23 @ 19.25</summary>
+        <p>
+          I'm writing this with Macbook Pro 16in with 32GB. In the background I have Music app playing The Killers - Shot At the Night. 
+          I'm using nvim as an editor and Warp as a terminal. It brings memories from the 90's when I took my first computer, a C64.
+          I was only 5 years old. I knew shit about technology. I remember I saw my dad writing something. It was code. The music came
+          from the radio. I was sitting at his side. What an image of how things have changes. My generation has lived the birth of so
+          many great things. Today, however, I have reached a point in life that I'm wondering why the fucking fuck things got inexcusable
+          complex.
+        </p>
+        <p>
+          Apps in mobile crashing or slow. My laptop takes ages to start up. The amount of node modules is getting bigger and bigger that 
+          I'm worried about the planet collapsing into a blackhole. Not even Thor's hammer weights so much. JESUS!
+        </p>
+        <p>
+          On the internet constant stupid discussions about which one is better and inclusivity and so. I mean I understand we need space for
+          creativity but for the love of Odin's beard where we draw the line!?
+        </p>
+        <p>
+          How the fuck are we going to fix this? I was working on a project, a microservice architecture, that I kid you not there was no fucking
+          need to make use of such architecture. It seems it was an overengineering mistake. Ain't no saint, I have made such errors too. The project
+          was made with Ruby on Rails, a framework I left behind when I discovered Phoenix.
+        </p>
+        <p>
+          I'm not a software engineer. I majored in physics, for better or worse. So when I learnt about functional programming, I have a stroke.
+          Since that day, I have never looked back. This is painful, though. It's part of the reason of this <s>post</s> rant.
+        </p>
+        <p>
+          It's been years I wanted to start a blog about my adventures in programming. But every time it was the same, what could I possible share of value?
+          Today, I think, I have come to the conclusion but someone will find some value in this blog and what better with a rant about complexity.
+        </p>
+        <p>
+          Let us begin, then ^_^
+        </p>
+      </details>
+    </article>
+  </body>
+</html>
