@@ -11,11 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /*
-      LaTeX‑inspired typography & layout
-      — Clean rhythm, restrained palette, beautiful type, and small‑caps flourishes.
-    */
-
     :root {
       --bg: #f7f5f2;           /* paper-like background */
       --paper: #fffdfa;        /* page card */
@@ -30,6 +25,8 @@
       --vr: 0.5rem;            /* vertical rhythm unit */
       --radius: 16px;          /* card rounding */
       --shadow: 0 8px 30px rgba(0,0,0,.08);
+      --gap: 1.25rem; /* consistent rhythm */
+      --ink: #1a1a1a;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -231,6 +228,52 @@
 
     /* Small niceties */
     ::selection { background: color-mix(in srgb, var(--accent), white 70%); }
+
+    /* --- Gallery --- */
+    .gallery {
+      counter-reset: figure; /* reset for each gallery */
+    }
+
+    figure {
+      margin: 0;
+      padding: 0;
+      background: none;
+      border: 1px solid var(--ink-20); /* subtle plate border */
+      page-break-inside: avoid; /* print-friendly */
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    figcaption {
+      padding: calc(var(--gap) * 0.75) calc(var(--gap) * 0.75) calc(var(--gap) * 0.85);
+      font-size: 0.975rem;
+      color: var(--ink-60);
+      border-top: 1px solid var(--ink-20);
+      hyphens: auto;
+      text-wrap: pretty; /* nicer line breaks on modern browsers */
+    }
+
+        small.kicker {
+      display: block;
+      font-size: 0.88rem;
+      margin-top: .25rem;
+      color: #777;
+    }
+
+    @media (min-width: 1100px) {
+      .container { max-width: 90ch; }
+    }
+
+    @media print {
+    body { background: white; }
+      .container { margin: 0 auto; padding: 0; }
+      a::after { content: " (" attr(href) ")"; font-size: 0.9em; }
+    }
   </style>
 </head>
 
@@ -238,7 +281,8 @@
   <div class="wrapper">
     <header>
       <div class="brand">
-        noumena hundimägi <span style="font-size: smaller;">(n0um3n4)</span>
+        noumena hundimägi <span style="font-size: smaller;">(n0um3n4)</span><br/>
+        <span style="font-size: smaller; font-weight: 100; font-variant-caps: small-caps;"><em>wisdom is a woman and she only ever loves a warrior</em></span>
       </div>
     </header>
 
@@ -452,24 +496,389 @@
           <span style="font-size: smaller;">Bear in mind, you need to text me first 'cuz all unregistered numbers are silenced and I won't pick up the phone.</span>
           </p>
         </section>
+
+        <section class="gallery">
+          <h2>Personal Stuff</h2>
+          <p>Here's a gallery of my timeline, not in a particular order.</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: calc(var(--gap) * 1.25);">
+            <figure>
+              <img src="photos/045C8CA3-1ACE-476A-A36B-3F97B458B6D9.JPG" alt="selfie" />
+              <figcaption><small class="kicker">Never like selfies. I do like my moustachou, though</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0102.JPG" alt="Photo IMG_0102.JPG">
+              <figcaption><small class="kicker">He was Corajes. Was a loyal and fierceless dog despites its clearly dimensional disadvantages. That picture was taken by my sister. she said 'Corajes protector of the Papayas'.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0532.JPG" alt="Photo IMG_0532.JPG">
+              <figcaption><small class="kicker">Bearoso, the alpha who was not the alpha LoL.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7582.JPG" alt="Photo IMG_7582.JPG">
+              <figcaption><small class="kicker">I had so many guinea pigs I cannot recall his name :/</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/18731c4e-2a87-4fce-9038-ffe8c189a415.jpg" alt="Photo 18731c4e-2a87-4fce-9038-ffe8c189a415.jpg">
+              <figcaption><small class="kicker">My nephew and my dad. Everyone thinks these two are clones.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0127.JPG" alt="Photo IMG_0127.JPG">
+              <figcaption><small class="kicker">My dearest Mota... certainly my favorite &hearts;&hearts;&hearts;</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0536.JPG" alt="Photo IMG_0536.JPG">
+              <figcaption><small class="kicker">Choco, simple and cute. He used to get so scared with fireworks.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7583.JPG" alt="Photo IMG_7583.JPG">
+              <figcaption><small class="kicker">Rupertou, the blind and deaf cat. I still remember he waited for me to die.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/21951685-f7cb-42d4-bc2a-ffe7ce79f469.jpg" alt="Photo 21951685-f7cb-42d4-bc2a-ffe7ce79f469.jpg">
+              <figcaption><small class="kicker">Gamenight with my best friends &hearts;&hearts;&hearts;</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0138.JPG" alt="Photo IMG_0138.JPG">
+              <figcaption><small class="kicker">Even though my eyes are simple and common, I love them very much.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0538.JPG" alt="Photo IMG_0538.JPG">
+              <figcaption><small class="kicker">Mota and her tongue, cute.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7584.JPG" alt="Photo IMG_7584.JPG">
+              <figcaption><small class="kicker">Their noises, I always find them fascinating.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/38281265-4fe1-4104-a6e8-e5968f8af0d3.jpg" alt="Photo 38281265-4fe1-4104-a6e8-e5968f8af0d3.jpg">
+              <figcaption><small class="kicker">My nieces, Sara and babe Emma.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0145.JPG" alt="Photo IMG_0145.JPG">
+              <figcaption><small class="kicker">It was a hot day</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0542.JPG" alt="Photo IMG_0542.JPG">
+              <figcaption><small class="kicker">Güera, she was always so independent except on rainy days</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7585.JPG" alt="Photo IMG_7585.JPG">
+              <figcaption><small class="kicker">Ray, the day I found her she was coming out from a very dangerous street full of speeding cars.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/56210076704__1821D83E-C07E-4581-8F12-49EDB7E048E5.JPG" alt="Photo 56210076704__1821D83E-C07E-4581-8F12-49EDB7E048E5.JPG">
+              <figcaption><small class="kicker">Accidental Renaissance</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0149.JPG" alt="Photo IMG_0149.JPG">
+              <figcaption><small class="kicker">Cannot recall his name :/</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0657.JPG" alt="Photo IMG_0657.JPG">
+              <figcaption><small class="kicker">One from my days in Hamburg</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7586.JPG" alt="Photo IMG_7586.JPG">
+              <figcaption><small class="kicker">He was the tiniest dog I ever had.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/7b5f52e3-6d44-4978-937c-22ef2f814dbc.jpg" alt="Photo 7b5f52e3-6d44-4978-937c-22ef2f814dbc.jpg">
+              <figcaption><small class="kicker">My carnal</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0166.JPG" alt="Photo IMG_0166.JPG">
+              <figcaption><small class="kicker">Selfie... ew</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0689.JPG" alt="Photo IMG_0689.JPG">
+              <figcaption><small class="kicker">Paw, Choco and Mota as babies &hearts;&hearts;&hearts;</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7587.JPG" alt="Photo IMG_7587.JPG">
+              <figcaption><small class="kicker">Leono</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/86bc3669-f128-4cb0-88da-86df85d03060.jpg" alt="Photo 86bc3669-f128-4cb0-88da-86df85d03060.jpg">
+              <figcaption><small class="kicker">My naphew</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0168.JPG" alt="Photo IMG_0168.JPG">
+              <figcaption><small class="kicker">Sylvester always found ways to look exactly at the camera</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_1470.JPG" alt="Photo IMG_1470.JPG">
+              <figcaption><small class="kicker">College years... whatadda days!</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7589.JPG" alt="Photo IMG_7589.JPG">
+              <figcaption><small class="kicker">Lola, she was very neurotic but in the end she got better</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/9c2a196e-f999-433b-ab75-1eec9bcd03c6.jpg" alt="Photo 9c2a196e-f999-433b-ab75-1eec9bcd03c6.jpg">
+              <figcaption><small class="kicker">My naphew, Diego, and my brother-in-law</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0170.JPG" alt="Photo IMG_0170.JPG">
+              <figcaption><small class="kicker">Louise</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_5374.JPG" alt="Photo IMG_5374.JPG">
+              <figcaption><small class="kicker">Ew</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7591.JPG" alt="Photo IMG_7591.JPG">
+              <figcaption><small class="kicker">her name was...? :/</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0001.JPG" alt="Photo IMG_0001.JPG">
+              <figcaption><small class="kicker">My favorite game, Another World. A physicist travelled to another planet while doing experiment in his particle accelarator. He ended up making a new friend.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0175.JPG" alt="Photo IMG_0175.JPG">
+              <figcaption><small class="kicker">Rupertou</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_5376.JPG" alt="Photo IMG_5376.JPG">
+              <figcaption><small class="kicker">...</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7597.JPG" alt="Photo IMG_7597.JPG">
+              <figcaption><small class="kicker">The Gang!</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0008.JPG" alt="Photo IMG_0008.JPG">
+              <figcaption><small class="kicker">Why cats love boxes!?</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0199.JPG" alt="Photo IMG_0199.JPG">
+              <figcaption><small class="kicker">Rupertou and his evil eyes</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_5377.JPG" alt="Photo IMG_5377.JPG">
+              <figcaption><small class="kicker">Cute eye ;)</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7598.jpg" alt="Photo IMG_7598.jpg">
+              <figcaption><small class="kicker">Totoro and Lisa</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0023.JPG" alt="Photo IMG_0023.JPG">
+              <figcaption><small class="kicker">One day, we got papayas!</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0227.JPG" alt="Photo IMG_0227.JPG">
+              <figcaption><small class="kicker">So lucky to be surrounded by cats and dogs</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7570.jpg" alt="Photo IMG_7570.jpg">
+              <figcaption><small class="kicker">Tigro, the most peaceful and chill orange cat on the Cosmos</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7599.jpg" alt="Photo IMG_7599.jpg">
+              <figcaption><small class="kicker">I don't even remeber how I took this photo!</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0039.JPG" alt="Photo IMG_0039.JPG">
+              <figcaption><small class="kicker">Cupid, my landlady's dog</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0331.JPG" alt="Photo IMG_0331.JPG">
+              <figcaption><small class="kicker">Sara and my sister-in-law, Pinina</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7571.jpg" alt="Photo IMG_7571.jpg">
+              <figcaption><small class="kicker">Bonnie</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7606.JPG" alt="Photo IMG_7606.JPG">
+              <figcaption><small class="kicker">and Clyde!</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0040.jpg" alt="Photo IMG_0040.jpg">
+              <figcaption><small class="kicker">I remember this photo, once in a life time</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0332.JPG" alt="Photo IMG_0332.JPG">
+              <figcaption><small class="kicker">My carnal and his daughter Sara.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7572.jpg" alt="Photo IMG_7572.jpg">
+              <figcaption><small class="kicker">Leono!</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/b73444da-8ce0-4b14-a786-1e5fc94c6163.jpg" alt="Photo b73444da-8ce0-4b14-a786-1e5fc94c6163.jpg">
+              <figcaption><small class="kicker">My dad, middle, and his siblings, aunt Claudia is taking the photo</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0044.JPG" alt="Photo IMG_0044.JPG">
+              <figcaption><small class="kicker">Wow, the day I became a physicist</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0333.JPG" alt="Photo IMG_0333.JPG">
+              <figcaption><small class="kicker">Pinina and Sara</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7574.JPG" alt="Photo IMG_7574.JPG">
+              <figcaption><small class="kicker">MeowMeow, certainly one of my favorites.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/dce850cf-1869-4072-a6cf-960b54f57f65.jpg" alt="Photo dce850cf-1869-4072-a6cf-960b54f57f65.jpg">
+              <figcaption><small class="kicker">My grandma... my bestie in my childhood years</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0066.JPG" alt="Photo IMG_0066.JPG">
+              <figcaption><small class="kicker">Always expecting the visits</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0476.jpg" alt="Photo IMG_0476.jpg">
+              <figcaption><small class="kicker">My mom</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7575.JPG" alt="Photo IMG_7575.JPG">
+              <figcaption><small class="kicker">Bono, was a complicated dog, I hope he found his peace.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/dfdc0f60-4409-430f-9634-69bfbfb8a44c.jpg" alt="Photo dfdc0f60-4409-430f-9634-69bfbfb8a44c.jpg">
+              <figcaption><small class="kicker">My sis, Elsy, and Diego. I don't recall the name of her dog</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0069.JPG" alt="Photo IMG_0069.JPG">
+              <figcaption><small class="kicker">No hair</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0512.JPG" alt="Photo IMG_0512.JPG">
+              <figcaption><small class="kicker">Check the mustachou!</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7577.JPG" alt="Photo IMG_7577.JPG">
+              <figcaption><small class="kicker">Totoro</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0070.JPG" alt="Photo IMG_0070.JPG">
+              <figcaption><small class="kicker">...</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0527.JPG" alt="Photo IMG_0527.JPG">
+              <figcaption><small class="kicker">My bitches, Mota and Güera</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7579.jpg" alt="Photo IMG_7579.jpg">
+              <figcaption><small class="kicker">I think his name was Brain</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0089.jpg" alt="Photo IMG_0089.jpg">
+              <figcaption><small class="kicker">One of my favorite photo of the family, it was a hot day</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_0529.JPG" alt="Photo IMG_0529.JPG">
+              <figcaption><small class="kicker">Hey, Paw, I miss you brodha.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_7581.JPG" alt="Photo IMG_7581.JPG">
+              <figcaption><small class="kicker">Don't recall his name.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/b2da7122-f3d3-4b07-9f77-a03ceb16df6b.jpeg" alt="Photo IMG_7581.JPG">
+              <figcaption><small class="kicker">My latest tattoo. Mononoke is by far the best representation of me.</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_9594.jpeg" alt="Photo IMG_7581.JPG">
+              <figcaption><small class="kicker">Mota... latest photo</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_6774.jpeg" alt="Photo IMG_7581.JPG">
+              <figcaption><small class="kicker">When I weighted 73kg</small></figcaption>
+            </figure>
+
+            <figure>
+              <img src="photos/IMG_9352.jpeg" alt="Photo IMG_7581.JPG">
+              <figcaption><small class="kicker">Cool mode, intentionally left the shades on for Kairi</small></figcaption>
+            </figure>
+           </div>
+        </section>
       </main>
     </div>
 
+
+    <figure style="max-width: 343px; margin: 0 auto;">
+      <img src="photos/5737A081-FBA1-4A1B-9125-4CF2753F75EC.jpeg" alt="Photo IMG_7581.JPG">
+    </figure>
+
     <footer>
-      <p style="font-size: smaller;"><em>I love LateX, exhibit A</em>.</p>
+      <p style="font-size: smaller;"><em>To run away and live with the wolves</em></p>
     </footer>
   </div>
-
-  <script>
-    // Set current year
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Optional: drop in KaTeX for TeX-quality math typesetting
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-TQd3xg4zHf0hxw5QW0k9oF1k3m2c5e2mBLk4O0u1m7nE5u6q5iXkRXJXJtSooa5b" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);" ></script>
-  -->
 </body>
 </html>
 
