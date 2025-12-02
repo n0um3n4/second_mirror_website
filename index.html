@@ -274,6 +274,74 @@
       .container { margin: 0 auto; padding: 0; }
       a::after { content: " (" attr(href) ")"; font-size: 0.9em; }
     }
+
+    #gaming-profiles {
+        max-width: 800px;
+        border-radius: 1rem;
+        backdrop-filter: blur(8px);
+      }
+
+      #gaming-profiles h2 {
+        margin: 0 0 0.5rem;
+        font-size: 1.8rem;
+      }
+
+      #gaming-profiles p {
+        margin: 0 0 1.5rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+
+      .gaming-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .gaming-card {
+        padding: 1rem 1.2rem;
+        border-radius: 0.9rem;
+      }
+
+      .gaming-card h3 {
+        margin: 0 0 0.25rem;
+        font-size: 1.1rem;
+      }
+
+      .game-tagline {
+        margin: 0;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0.7;
+      }
+
+      .game-value {
+        margin: 0.4rem 0 0;
+        word-break: break-all;
+      }
+
+      .game-value code {
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.4rem;
+        font-size: 0.9rem;
+      }
+
+      .game-value a {
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      .game-value a:hover {
+        border-bottom-style: solid;
+      }
+
+      @media (max-width: 600px) {
+        #gaming-profiles {
+          margin: 2rem 1rem;
+          padding: 1.5rem;
+        }
+      }
   </style>
 </head>
 
@@ -500,6 +568,57 @@
           You can see my <a href="https://github.com/n0um3n4">github</a> profile. <br /><br />
           <span style="font-size: smaller;">Bear in mind, you need to text me first 'cuz all unregistered numbers are silenced and I won't pick up the phone.</span>
           </p>
+        </section>
+
+
+        <section id="gaming-profiles">
+          <h2>Let's play!</h2>
+
+          <div class="gaming-grid">
+            <div class="gaming-card">
+              <h3>Nintendo Switch</h3>
+              <p class="game-value">
+                <code>SW-2841-4685-4894</code>
+              </p>
+            </div>
+
+            <div class="gaming-card">
+              <h3>Steam</h3>
+              <p class="game-value">
+                <a href="https://steamcommunity.com/id/n0um3n4/" target="_blank" rel="noopener">
+                  n0um3n4
+                </a>
+              </p>
+            </div>
+
+            <div class="gaming-card">
+              <h3>Riot</h3>
+              <p class="game-value">
+                <code>noumena#919</code>
+              </p>
+            </div>
+
+            <div class="gaming-card">
+              <h3>Battle.net</h3>
+              <p class="game-value">
+                <code>noumena#11886</code>
+              </p>
+            </div>
+
+            <div class="gaming-card">
+              <h3>PS</h3>
+              <p class="game-value">
+                <code>noumena-mx</code>
+              </p>
+            </div>
+
+            <div class="gaming-card">
+              <h3>Discord</h3>
+              <p class="game-value">
+                <code>n0um3n4 /  <em>1263265476126052373</em> </code>
+              </p>
+            </div>
+          </div>
         </section>
 
         <section class="gallery">
@@ -847,6 +966,7 @@
             </figure>
           </div>
         </section>
+
       </main>
     </div>
 
